@@ -1,0 +1,26 @@
+#Prerequisite:
+  1.To push code from windows to GitHub you must install the git desktop on your PC.
+  
+  2.Create one repository public or private as you want on your github account.
+
+  3.To push code on github you have to add ssh_public key in your github account for authentication purpose, for this follow below steps:
+       a. open powershell or cmd and type ssh-keygen and press enter enter until keys get generated.
+       b. Once keys are generated copy public ssh key which is stored in .ssh\id_rsa.pub and paste it in your github account in SSH and GPG Keys section 
+          under settins in github account.Thats it! now you are good to go further.
+
+# Git Commands to push code on GitHub:
+ Go inside folder which you want to push on github and right click, go to show more options and click on open git bash here, git bash terminal will open 
+ in your current folder, now run the following commands to push code:
+ 
+1.$ git init  (This command will initialize an empty repository,after running this command your console shows like:Initialized new empty repository)
+
+ $ rm -rf .git (Run this command only if your console shows: Reinitialized new empty repository, after running above 1st command, This will delete repository 
+               that is alresdy initialized)
+
+2.$ git add . (This command will add your current folder to satging area, means it get's ready for commit)
+
+3.$ git commit -m "message as you want give" (This command will attach a message that you provide with your commit)
+
+4.$ git remote add origin ssh_url_of_github_repository (This command will add your repository on github which you created earlier)
+
+5.$ git push origin master (This command will push all content in your current folder to github repository)  
